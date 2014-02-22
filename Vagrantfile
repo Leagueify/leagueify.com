@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.ssh.forward_agent = true
 
 	# modify this if you're not using default nginx site
-	config.vm.synced_folder "./app/public", "/var/www/app/public", owner: "www-data", group: "www-data"
+	config.vm.synced_folder "./src/public", "/var/www/app/public", owner: "www-data", group: "www-data"
 
 	# make sure you have the vagrant-omnibus plugin installed
 	config.omnibus.chef_version = :latest
