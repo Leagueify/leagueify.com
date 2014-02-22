@@ -31,3 +31,4 @@ def elb
   region = region[0, region.length-1]
   @@elb ||= RightAws::ElbInterface.new(new_resource.aws_access_key, new_resource.aws_secret_access_key, { :logger => Chef::Log, :region => region })
 end
+

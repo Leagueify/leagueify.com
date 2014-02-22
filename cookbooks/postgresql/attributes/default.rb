@@ -483,3 +483,4 @@ default['postgresql']['pgdg']['repo_rpm_url'] = {
     }
   },
 };
+

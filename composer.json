@@ -1,6 +1,0 @@
-{
-    "require": {
-        "symfony/framework-standard-edition": "v2.4.0",
-        "bmatzner/foundation-bundle": "5.0.2"
-    }
-}

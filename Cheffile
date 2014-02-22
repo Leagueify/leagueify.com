@@ -7,7 +7,5 @@ cookbook "apt"
 cookbook "vim", {}
 cookbook "git", {}
 cookbook "mysql", {}
-cookbook "nginx", {}
-cookbook "php", {}
-cookbook "composer", {}
 cookbook "database", {}
+cookbook "nodejs", {}

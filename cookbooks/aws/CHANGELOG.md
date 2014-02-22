@@ -7,7 +7,7 @@ v2.0.0 (2014-02-19)
 -------------------
 [COOK-2755] Add allocate action to the elastic ip resource
 [COOK-2829] Expose AWS credentials for ebs_raid LWRP as parameters
-[COOK-2935]
+[COOK-2935] 
 [COOK-4213] Use use_inline_resources
 [COOK-3467] Support IAM role
 [COOK-4344] Add support for mounting existing raids and reusing volume

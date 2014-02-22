@@ -1,0 +1,23 @@
+{
+  "name": "leagueify.com",
+  "version": "0.0.0",
+  "description": "leagueify.com =========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Leagueify/leagueify.com.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Leagueify/leagueify.com/issues"
+  },
+  "homepage": "https://github.com/Leagueify/leagueify.com",
+  "private": true,
+  "dependencies": {
+    "express": "~3.4.8",
+    "nunjucks": "~1.0.1"
+  }
+}

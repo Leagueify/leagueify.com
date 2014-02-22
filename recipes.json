@@ -5,9 +5,7 @@
 		"recipe[git]",
 		"recipe[mysql::server]",
 		"recipe[database::mysql]",
-		"recipe[nginx]",
-		"recipe[php]",
-		"recipe[composer]",
+		"recipe[nodejs]",
 		"recipe[app]"
 	]
 }
