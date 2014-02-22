@@ -29,8 +29,10 @@ create table league
 );
 
 insert into league values (1, 'Snowfall Smackdown', 'snowflake.jpg', 'When it snows it blows.');
-insert into league values (2, 'Big Fish Chanmpionship', 'muskie.jpg', 'It''s got teeth');
-insert into league values (3, 'Olympics Olympics', 'rings.jpg', 'The agony of defeat.');
+insert into league values (2, 'Campaign Finance Fantasy', 'ed_muskie.jpg', 'Bunting');
+insert into league values (3, 'Summer Blockbuster Trackers', 'oscar.jpg', 'More cowbell');
+insert into league values (4, 'Githup Commit Counts', 'octocat.jpg', 'Aww yeah');
+insert into league values (5, 'Olympics Olympics', 'rings.jpg', 'The agony of defeat.');
 
 drop table team;
 
@@ -66,3 +68,19 @@ insert into player values (3, 1, 'La Crosse');
 insert into player values (4, 1, 'Madison');
 insert into player values (5, 1, 'Chicago');
 insert into player values (6, 1, 'Superior');
+
+
+
+drop table points;
+
+create table points
+( points_id MEDIUMINT NOT NULL AUTO_INCREMENT
+, player_id MEDIUMINT
+, raw_data  text
+, point_value decimal (10,3)
+);
+
+
+insert into points values (1, 1, '{''140220'' : 26.7}', 26.7);
+insert into points values (2, 1, '{''140219'' : 2.2}', 2.2);
+insert into points values (3, 1, '{''140207'' : 12}', 12);
