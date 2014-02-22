@@ -1,0 +1,11 @@
+{
+	"run_list": [
+		"recipe[apt]",
+		"recipe[vim]",
+		"recipe[git]",
+		"recipe[mysql]"
+		"recipe[nginx]",
+		"recipe[composer]",
+		"recipe[app]"
+	]
+}
