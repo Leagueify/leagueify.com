@@ -38,3 +38,13 @@ service "php5-fpm" do
 	supports :status => true, :restart => true
 	action :start
 end
+
+# Create DB
+mysql_database 'leagueify' do
+  connection(
+    :host     => 'localhost',
+    :username => 'root',
+    :password => node['mysql']['server_root_password']
+  )
+  action :create
+end

@@ -10,3 +10,4 @@ cookbook "mysql", {}
 cookbook "nginx", {}
 cookbook "php", {}
 cookbook "composer", {}
+cookbook "database", {}
