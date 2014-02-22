@@ -48,3 +48,8 @@ mysql_database 'leagueify' do
   )
   action :create
 end
+
+# install composer deps
+composer_project "/vagrant" do
+	action :install
+end
