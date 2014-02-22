@@ -3,7 +3,7 @@
 		"recipe[apt]",
 		"recipe[vim]",
 		"recipe[git]",
-		"recipe[mysql]"
+		"recipe[mysql]",
 		"recipe[nginx]",
 		"recipe[composer]",
 		"recipe[app]"
