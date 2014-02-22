@@ -2,8 +2,10 @@
   "name": "leagueify.com",
   "version": "0.0.0",
   "description": "leagueify.com =========",
-  "main": "index.js",
+  "main": "app/app.js",
   "scripts": {
+    "start": "PORT=80 node app/app.js",
+    "dev": "nodemon --watch app --ext html,js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +24,8 @@
     "mysql": "~2.1.0",
     "sequelize": "~1.7.0-rc8",
     "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "~1.0.15"
   }
 }

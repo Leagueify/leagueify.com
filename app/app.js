@@ -11,7 +11,7 @@ var path = require('path');
 var nunjucks = require('nunjucks');
 
 var app = express();
-var env = new nunjucks.Environment(new nunjucks.FileSystemLoader('views'));
+var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(path.join(__dirname, 'views')));
 env.express(app);
 
 // all environments
