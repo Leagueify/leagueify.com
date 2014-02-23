@@ -57,9 +57,12 @@ footer .inline-list {
   float: right;
   margin: 0rem 0.5rem;
 }
+.webicon:hover {
+  margin: 0rem 0.5rem;
+}
 
 @media only screen and (min-width: 40.063em) {
   .top-bar-section li:not(.has-form) a:not(.button) {
     background: transparent;
-}
+  }
 }
