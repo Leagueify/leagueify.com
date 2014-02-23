@@ -7,7 +7,14 @@
 		<p>Howdy, {{ user.name }}. Here are your league stats!</p>
 		{% for league in leagues %}
 			<h3>{{ league.name }}</h3>
-			<div class="panel" id="visualization" style="height: 350px"></div>
+			<div class="alert-box info text-center">
+				Good news everybody, your team <strong>Bub and Bob</strong> is in the lead!&nbsp;&nbsp;&nbsp;
+				<a class="button" href="https://twitter.com/intent/tweet?url=http://leagueify.com/leagues/olympics&text=My team Bub and Bob is dominating in Olympics Olympics!&hashtags=leagueify">Enable the Smack Talk!</a>
+			</div>
+			<div class="panel" id="visualization" style="height: 300px"></div>
+
+
+			<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 			<script type="text/javascript" src="//www.google.com/jsapi"></script>
 		    <script type="text/javascript">
 		      google.load('visualization', '1', {packages: ['corechart']});

@@ -4,12 +4,8 @@ body {
   background: #e8e8e8;
 }
 
-.button {
-  margin: 0 auto;
-  display: block;
-}
-.button a {
-  color: #FFFFFF;
+.alert-box .button {
+  margin-bottom: 0;
 }
 
 .top-bar-container {
