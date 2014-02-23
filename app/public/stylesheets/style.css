@@ -4,6 +4,14 @@ body {
   background: #e8e8e8;
 }
 
+.button {
+  margin: 0 auto;
+  display: block;
+}
+.button a {
+  color: #FFFFFF;
+}
+
 .top-bar-container {
   background: #141414;
 }
@@ -26,6 +34,10 @@ body {
 
 .hero-area {
   padding: 5rem 3rem;
+}
+.hero-area .button {
+  max-width: 10rem;
+  margin: 3rem auto;
 }
 .home-heading {
   text-align: center;
