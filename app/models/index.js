@@ -2,8 +2,8 @@ var fs        = require('fs')
   , path      = require('path')
   , Sequelize = require('sequelize')
   , lodash    = require('lodash')
-  , sequelize = new Sequelize('sequelize_test', 'root', null)
-  , db        = {}
+  , sequelize = new Sequelize('leagueify', 'root', 'test')
+  , db        = {};
  
 fs
   .readdirSync(__dirname)
