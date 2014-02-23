@@ -2,9 +2,9 @@ var fs        = require('fs')
   , path      = require('path')
   , Sequelize = require('sequelize')
   , lodash    = require('lodash')
-  , sequelize = new Sequelize('leagueify', 'root', 'test')
+  , sequelize = new Sequelize('leagueify', 'root', 'test', { host: '192.168.2.50', port: process.env.MYSQL_PORT || 3306 })
   , db        = {};
- 
+
 fs
   .readdirSync(__dirname)
   .filter(function(file) {

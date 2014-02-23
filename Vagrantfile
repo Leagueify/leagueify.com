@@ -15,9 +15,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.network "private_network", ip: IP_ADDRESS
 	config.ssh.forward_agent = true
 
-	# modify this if you're not using default nginx site
-	config.vm.synced_folder "./src/public", "/var/www/app/public", owner: "www-data", group: "www-data"
-
 	# make sure you have the vagrant-omnibus plugin installed
 	config.omnibus.chef_version = :latest
 
