@@ -31,8 +31,3 @@ mysql_database_user 'root' do
   password   node['mysql']['server_root_password']
   action     :grant
 end
-
-execute 'npm install' do
-  cwd '/vagrant'
-end
-
