@@ -70,6 +70,10 @@ footer .inline-list {
   margin: 0rem 0.5rem;
 }
 
+table td, table th {
+  border-bottom: solid 1px #ddd;
+}
+
 @media only screen and (min-width: 40.063em) {
   .top-bar-section li:not(.has-form) a:not(.button) {
     background: transparent;

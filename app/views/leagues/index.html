@@ -3,48 +3,161 @@
 {% block content %}
 
 	<div class="row" style="padding:2rem">
-		<h2>My Leagues</h2>
-		<p>Howdy, {{ user.name }}. Here are your league stats!</p>
-		{% for league in leagues %}
-			<h3>{{ league.name }}</h3>
-			<div class="alert-box info text-center">
-				Good news everybody, your team <strong>Bub and Bob</strong> is in the lead!&nbsp;&nbsp;&nbsp;
-				<a class="button" href="https://twitter.com/intent/tweet?url=http://leagueify.com/leagues/olympics&text=My team Bub and Bob is dominating in Olympics Olympics!&hashtags=leagueify">Enable the Smack Talk!</a>
+		<div>
+			<ul class="breadcrumbs" style="display:inline-block;">
+			  <li><a href="#">Home</a></li>
+			  <li><a href="#">My Teams</a></li>
+			  <li class="current"><a href="#">Bub and Bob</a></li>
+			</ul>
+		</div>
+		<h2>Bub and Bob</h2>
+		<div class="alert-box info text-center">
+			Good news everyone, your team <strong>Bub and Bob</strong> is in the lead!&nbsp;&nbsp;&nbsp;
+			<a class="button" href="https://twitter.com/intent/tweet?url=http://leagueify.com/leagues/olympics&text=My team Bub and Bob is dominating in Olympics Olympics!&hashtags=leagueify">Smack talk your friends!</a>
+		</div>
+
+		<div class="clearfix">
+			<div class="large-6 columns">
+				<h3 class="text-center">Team</h3>
+				<table>
+				  <thead>
+				    <tr>
+				      <th>Rank</th>
+				      <th>Team</th>
+				      <th>Score</th>
+				      <th>Total Gold</th>
+				      <th>Total Silver</th>
+				      <th>Total Bronze</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>1</td>
+				      <td>Bub and Bob</td>
+				      <td>212.5</td>
+				      <td>12</td>
+				      <td>24</td>
+				      <td>20</td>
+				    </tr>
+				    <tr>
+				      <td>2</td>
+				      <td>Love to Curl</td>
+				      <td>150.4</td>
+				      <td>10</td>
+				      <td>10</td>
+				      <td>3</td>
+				    </tr>
+				    <tr>
+				      <td>3</td>
+				      <td>Robot Rocks</td>
+				      <td>115.8</td>
+				      <td>9</td>
+				      <td>3</td>
+				      <td>2</td>
+				    </tr>
+				    <tr>
+				      <td>4</td>
+				      <td>Canadians!</td>
+				      <td>24.9</td>
+				      <td>0</td>
+				      <td>1</td>
+				      <td>2</td>
+				    </tr>
+				  </tbody>
+				</table>
 			</div>
-			<div class="panel" id="visualization" style="height: 300px"></div>
 
+			<div class="large-6 columns">
+				<h3 class="text-center">Your Players</h3>
+				<table>
+				  <thead>
+				    <tr>
+				      <th>Country</th>
+				      <th>Score</th>
+				      <th>Total Gold</th>
+				      <th>Total Silver</th>
+				      <th>Total Bronze</th>
+				      <th>Multiplier</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>Netherlands</td>
+				      <td>263.66</td>
+				      <td>8</td>
+				      <td>7</td>
+				      <td>9</td>
+				      <td>5.61</td>
+				    </tr>
+				    <tr>
+				      <td>Belarus</td>
+				      <td>153.33</td>
+				      <td>5</td>
+				      <td>0</td>
+				      <td>1</td>
+				      <td>9.58</td>
+				    </tr>
+				    <tr>
+				      <td>Poland</td>
+				      <td>58.47</td>
+				      <td>4</td>
+				      <td>4</td>
+				      <td>1</td>
+				      <td>3.90</td>
+				    </tr>
+				    <tr>
+				      <td>Malta</td>
+				      <td>0.00</td>
+				      <td>0</td>
+				      <td>0</td>
+				      <td>0</td>
+				      <td>230.00</td>
+				    </tr>
+				    <tr>
+				      <td>Peru</td>
+				      <td>0.00</td>
+				      <td>0</td>
+				      <td>0</td>
+				      <td>0</td>
+				      <td>76.67</td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
 
-			<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-			<script type="text/javascript" src="//www.google.com/jsapi"></script>
-		    <script type="text/javascript">
-		      google.load('visualization', '1', {packages: ['corechart']});
-		    </script>
-		    <script type="text/javascript">
-		      function drawVisualization() {
-		        // Create and populate the data table.
-		        var data = google.visualization.arrayToDataTable([
-		          ['Date', 'Bub and Bob', 'Robot Rocks', 'Canadians!', 'Swedish Fish', 'Love to Curl'],
-		          ['2/6',   1,       1,           10, 50, 40],
-		          ['2/8',   20,       2,         11, 60, 60],
-		          ['2/10',   40,       10,           25, 62, 70],
-		          ['2/12',   80,       15,         50, 65, 90],
-		          ['2/14',   100,       20,           75, 67, 150],
-		          ['2/16',   140,       25,         80, 67, 175],
-		          ['2/18',   280,       40,           85, 70, 200],
-		          ['2/20',   400,       100,         90, 75, 215],
-		          ['2/22',   532,       155,           100, 80, 240]
-		        ]);
-		      
-		        // Create and draw the visualization.
-		        new google.visualization.LineChart(document.getElementById('visualization')).
-		            draw(data, {width: '100%', height: '100%'}
-		                );
-		      }
-		      
+		<div class="panel" id="visualization" style="height: 300px"></div>
 
-		      google.setOnLoadCallback(drawVisualization);
-		    </script>
-		{% endfor %}
+		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+		<script type="text/javascript" src="//www.google.com/jsapi"></script>
+	    <script type="text/javascript">
+	      google.load('visualization', '1', {packages: ['corechart']});
+	    </script>
+	    <script type="text/javascript">
+	      function drawVisualization() {
+	        // Create and populate the data table.
+	        var data = google.visualization.arrayToDataTable([
+	          ['Date', 'Bub and Bob', 'Robot Rocks', 'Canadians!', 'Love to Curl'],
+	          ['2/6',   1,       1,           10, 40],
+	          ['2/8',   20,       2,         11, 60],
+	          ['2/10',   40,       10,           25, 70],
+	          ['2/12',   80,       15,         50, 90],
+	          ['2/14',   100,       20,           75, 150],
+	          ['2/16',   140,       25,         80, 175],
+	          ['2/18',   280,       40,           85, 200],
+	          ['2/20',   400,       100,         90, 215],
+	          ['2/22',   532,       155,           100, 240]
+	        ]);
+	      
+	        // Create and draw the visualization.
+	        new google.visualization.LineChart(document.getElementById('visualization')).
+	            draw(data, {width: '100%', height: '100%'}
+	                );
+	      }
+	      
+
+	      google.setOnLoadCallback(drawVisualization);
+	    </script>
 	</div>
 
 {% endblock %}
