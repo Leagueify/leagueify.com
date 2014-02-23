@@ -1,8 +1,65 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #e8e8e8;
 }
 
-a {
-  color: #00B7FF;
+.top-bar-container {
+  background: #141414;
+}
+.top-bar {
+  padding: 2rem;
+  height: auto;
+  margin: 0 auto;
+  max-width: 62.5rem;
+  background: transparent;
+}
+.top-bar .row {
+  
+}
+.top-bar .name h1 {
+  font-size: 2rem;
+}
+.top-bar-section ul {
+  background: transparent;
+}
+
+.hero-area {
+  padding: 5rem 3rem;
+}
+.home-heading {
+  text-align: center;
+}
+
+.popular-leagues {
+  padding: 3rem;
+  background: #FFFFFF;
+}
+.popular-leagues h2 {
+  text-align: center;
+}
+.popular-leagues p {
+  text-align: center;
+}
+
+.footer-container {
+  background: #141414;
+  padding: 2rem;
+}
+.copyright {
+  color: #FFFFFF;
+  margin: 0em;
+}
+footer .inline-list {
+  margin: 0rem;
+}
+.social-icons a {
+  float: right;
+  margin: 0rem 0.5rem;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .top-bar-section li:not(.has-form) a:not(.button) {
+    background: transparent;
+}
 }

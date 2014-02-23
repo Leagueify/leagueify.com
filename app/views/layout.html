@@ -1,112 +1,65 @@
 <!doctype html>
 <html>
 <head>
-  <title>Leagueify</title>
+  <title>Leagueify | Fantasy Leagues for anything</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="bower_components/foundation/css/normalize.css">
   <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/webicons.css">
   <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
 
-  <!-- Navigation -->
- 
+<!-- Navigation -->
+ <div class="top-bar-container">
   <nav class="top-bar" data-topbar>
-    <ul class="title-area">
-      <!-- Title Area -->
-      <li class="name">
-        <h1>
-          <a href="#">
-            Top Bar Title
-          </a>
-        </h1>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-    </ul>
- 
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Main Item 1</a>
-          <ul class="dropdown">
-            <li><label>Section Name</label></li>
-            <li class="has-dropdown">
-              <a href="#" class="">Has Dropdown, Level 1</a>
-              <ul class="dropdown">
-                <li><a href="#">Dropdown Options</a></li>
-                <li><a href="#">Dropdown Options</a></li>
-                <li><a href="#">Level 2</a></li>
-                <li><a href="#">Subdropdown Option</a></li>
-                <li><a href="#">Subdropdown Option</a></li>
-                <li><a href="#">Subdropdown Option</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><label>Section Name</label></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all →</a></li>
-          </ul>
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+          <img src="/images/leagueify-logo-white-transparent.png">
         </li>
-        <li class="divider"></li>
-        <li><a href="#">Main Item 2</a></li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Main Item 3</a>
-          <ul class="dropdown">
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all →</a></li>
-          </ul>
-        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
       </ul>
-    </section>
+   
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><a href="#">about</a></li>
+          <li><a href="#">leagues</a></li>
+          <li><a href="#">sign up</a></li>
+        </ul>
+      </section>
   </nav>
- 
-  <!-- End Top Bar -->
- 
-  <div class="row">
-    <div class="large-12 columns">
+</div>
 
-    <!-- Content -->
-    {% block content %}{% endblock %}
+<!-- Content -->
+{% block content %}{% endblock %}
+ 
 
     <!-- Footer -->
- 
-      <footer class="row">
-        <div class="large-12 columns"><hr>
-            <div class="row">
- 
-              <div class="large-6 columns">
-                  <p>© Copyright no one at all. Go to town.</p>
-              </div>
- 
-              <div class="large-6 small-12 columns">
-                  <ul class="inline-list right">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                  </ul>
-              </div>
- 
-            </div>
+  <div class="footer-container">
+  <footer class="row">
+    <div class="large-12 columns">
+        <div class="row">
+
+          <div class="large-6 columns">
+              <p class="copyright">© Copyright Leagueify.com.</p>
+          </div>
+
+          <div class="large-6 columns social-icons">
+            <a class="webicon googleplus" href="https://www.facebook.com/leagueify" target="_blank">Facebook</a>
+            <a class="webicon facebook" href="https://www.facebook.com/leagueify" target="_blank">Facebook</a>
+            <a class="webicon twitter" href="https://twitter.com/Leagueify" target="_blank">Facebook</a>
+          </div>
+
         </div>
-      </footer>
+    </div>
+  </footer>
+  </div>
  
     <!-- End Footer -->
- 
-    </div>
-  </div>
  
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/foundation/js/foundation.js"></script>
