@@ -2,14 +2,42 @@
 
 {% block content %}
 
-	<div class="row">
+	<div class="row" style="padding:2rem">
 		<h2>My Leagues</h2>
-		<p>Howdy, {{ user.name }}</p>
-		<ul>
+		<p>Howdy, {{ user.name }}. Here are your league stats!</p>
 		{% for league in leagues %}
-			<li>{{ league.name }}</li>
+			<h3>{{ league.name }}</h3>
+			<div id="visualization" style="width: 500px; height: 400px;"></div>
+			<script type="text/javascript" src="//www.google.com/jsapi"></script>
+		    <script type="text/javascript">
+		      google.load('visualization', '1', {packages: ['corechart']});
+		    </script>
+		    <script type="text/javascript">
+		      function drawVisualization() {
+		        // Create and populate the data table.
+		        var data = google.visualization.arrayToDataTable([
+		          ['Date', 'Bub and Bob', 'Robot Rocks', 'Canadians!', 'Swedish Fish', 'Love to Curl'],
+		          ['2/6',   1,       1,           10, 50, 40],
+		          ['2/8',   20,       2,         11, 60, 60],
+		          ['2/10',   40,       10,           25, 62, 70],
+		          ['2/12',   80,       15,         50, 65, 90],
+		          ['2/14',   100,       20,           75, 67, 150],
+		          ['2/16',   140,       25,         80, 67, 175],
+		          ['2/18',   280,       40,           85, 70, 200],
+		          ['2/20',   400,       100,         90, 75, 215],
+		          ['2/22',   532,       155,           100, 80, 240]
+		        ]);
+		      
+		        // Create and draw the visualization.
+		        new google.visualization.LineChart(document.getElementById('visualization')).
+		            draw(data, {width: 800, height: 400}
+		                );
+		      }
+		      
+
+		      google.setOnLoadCallback(drawVisualization);
+		    </script>
 		{% endfor %}
-		</ul>
 	</div>
 
 {% endblock %}

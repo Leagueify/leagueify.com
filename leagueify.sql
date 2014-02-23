@@ -33,4 +33,4 @@ drop table if exists user_leagues;
 
 CREATE TABLE `user_leagues` (`createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `userId` INTEGER , `leagueId` INTEGER , PRIMARY KEY (`userId`, `leagueId`)) ENGINE=InnoDB;
 
-insert into user_leagues values('2014-02-23 03:57:50', '2014-02-23 03:57:50', 1, 1);
+insert into user_leagues values('2014-02-23 03:57:50', '2014-02-23 03:57:50', 1, 3);

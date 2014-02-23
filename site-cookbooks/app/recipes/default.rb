@@ -8,7 +8,7 @@
 #
 
 mysql_connection_info = {
-	:host     => '0.0.0.0',
+	:host     => '192.168.2.50',
     :username => 'root',
     :password => node['mysql']['server_root_password']
 }
