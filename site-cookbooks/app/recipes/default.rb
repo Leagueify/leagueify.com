@@ -7,16 +7,25 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Create DB
-mysql_database 'leagueify' do
-  connection(
-    :host     => 'localhost',
+mysql_connection_info = {
+	:host     => 'localhost',
     :username => 'root',
     :password => node['mysql']['server_root_password']
-  )
+}
+
+# Create DB
+mysql_database 'leagueify' do
+  connection mysql_connection_info
   action :create
+end
+
+mysql_database 'leagueify' do
+  connection mysql_connection_info
+  sql { ::File.open('/vagrant/leagueify.sql').read }
+  action :query
 end
 
 execute 'npm install' do
   cwd '/vagrant'
 end
+
