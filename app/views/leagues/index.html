@@ -4,7 +4,12 @@
 
 	<div class="row">
 		<h2>My Leagues</h2>
-		<p>Howdy, {{ user.id }}</p>
+		<p>Howdy, {{ user.name }}</p>
+		<ul>
+		{% for league in leagues %}
+			<li>{{ league.name }}</li>
+		{% endfor %}
+		</ul>
 	</div>
 
 {% endblock %}
